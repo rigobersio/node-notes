@@ -17,7 +17,6 @@ const CB = (error, contenido) => {
     if(error) throw error;
     console.info(data);
   }
-
   const lectura = fs.readFileSync(path, 'utf-8', CBLectura);
   console.info(`El archivo fue creado o modificado. Su contenido es: ${lectura}` );
 }

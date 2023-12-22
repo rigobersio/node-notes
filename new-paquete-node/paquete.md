@@ -1,3 +1,4 @@
+## iniciar un paquete.
 1. nmp init
  ```bash
  This utility will walk you through creating a package.json file.
@@ -18,11 +19,46 @@ package name: (new-paquete-node)
     * luego va la versión del paquete (por defecto 1.0.0)
     * luego una descripción
     * luego pregunta por el punto de entrada (por defecto es index.js)
-        * este es como el archivo principal y los elementos de este archivo son los que se van a importar cuando se importe el paquete
+        * este es como el archivo principal y los elementos de este archivo son los que
+         se van a importar cuando se importe el paquete
     * luego va el comando de test (se pude dejar en blanco: todo se puede gestionar después).
     * git repository
     * keywords
     * Author
-    * lincense (por defecto es ISC)
+    * license (por defecto es ISC)
     * y luego se confirma antes de crear el package.json
 
+## ¿Qué es una archivo .json?
+ Son archivos basados en la sintaxis de JS y se ocupa mucho en desarrollo web para transmitir y almacenar información
+ JSON JS Object Notation, es una notación inspirada en Objetos JS pero de texto plano
+ En consecuencia permite almacenar `objetos JS` en formato de texto plano que se puede trasmitir entre e cliente y el servir
+ JSON es independiente del lenguaje que se este ocupando
+
+## ¿cómo iniciar instalar un paquete?
+ Cuando se instala un paquete estrictamente lo que se hace es instalar una dependencia de nuestro
+ paquete-NODE, y al mismo tiempo el gestor de paquetes (en este caso NPM) instalara las dependencia de ese paquete.
+
+ Para instalar la última version disponible el comando es:
+ ```bash
+ npm install paquete
+ ```
+ Para instalar un version en especifico
+ ```bash
+ npm install paquete@0.0.0 //número de la version
+ ```
+
+## package-lock.json
+ Se genera automáticamente cuando npm modifica el árbol de node_modules o package.json.
+ Describe el árbol generado para que futuras instalaciones puedan generar exactamente el mismo árbol.
+ Otros desarrolladores pueden instalar exactamente las mismas dependencias.
+
+## algunos comandos
+```bash
+npm install --save {nombre del paquete}
+npm install --g {nombre del paquete}
+npm update
+npm audit
+npm start
+npm test
+npm run {nombreScript}
+```
